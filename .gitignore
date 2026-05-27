@@ -1,16 +1,11 @@
 # Ignorar todo por defecto
 *
 
-# Permitir solo la carpeta del proyecto que se va a subir
-!proyecto-vscode/
-!proyecto-vscode/**
+# Permitir solo la carpeta de entrega que pide el README docente
+!ENTREGA_GIT_ESTUDIANTE/
+!ENTREGA_GIT_ESTUDIANTE/index.html
+!ENTREGA_GIT_ESTUDIANTE/styles.css
+!ENTREGA_GIT_ESTUDIANTE/script.js
 
 # Permitir este mismo archivo .gitignore
 !.gitignore
-
-# Permitir configuracion UTF-8 del proyecto
-!.vscode/
-!.vscode/settings.json
-
-# Opcional: permitir README si luego creas uno
-!README.md

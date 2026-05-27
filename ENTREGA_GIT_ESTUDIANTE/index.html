@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datos rurales - Panel de análisis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Navegación principal">
+      <strong>AgroDatos</strong>
+      <a href="#analisis">Panel de análisis</a>
+    </nav>
+
+    <div class="hero__contenido">
+      <p class="etiqueta">Semana 12 - Mejora incremental</p>
+      <h1>Datos rurales convertidos en información útil</h1>
+      <p>
+        Sistema web que muestra registros almacenados en JavaScript y calcula
+        indicadores para apoyar la lectura de productos, veredas y categorías.
+      </p>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="seccion" aria-labelledby="titulo-datos">
+      <div class="seccion__encabezado">
+        <div>
+          <p class="etiqueta">Datos almacenados</p>
+          <h2 id="titulo-datos">Registros rurales</h2>
+          <p>
+            La tabla se llena automáticamente con la información guardada en
+            JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Productor</th>
+              <th>Vereda</th>
+              <th>Cantidad</th>
+              <th>Precio unitario</th>
+              <th>Valor estimado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDatos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="seccion" id="analisis" aria-labelledby="titulo-analisis">
+      <div class="seccion__encabezado">
+        <div>
+          <p class="etiqueta">Mejora incremental</p>
+          <h2 id="titulo-analisis">Panel de análisis de datos</h2>
+          <p>
+            Este panel analiza los registros almacenados y permite filtrar la
+            información por búsqueda, categoría y vereda.
+          </p>
+        </div>
+
+        <div class="controles" aria-label="Controles de análisis">
+          <label>
+            Buscar
+            <input id="busqueda" type="search" placeholder="Producto, productor o vereda" />
+          </label>
+
+          <label>
+            Categoría
+            <select id="filtroCategoria">
+              <option value="todas">Todas</option>
+            </select>
+          </label>
+
+          <label>
+            Vereda
+            <select id="filtroVereda">
+              <option value="todas">Todas</option>
+            </select>
+          </label>
+
+          <button class="boton boton--secundario" id="btnRestablecer" type="button">
+            Restablecer filtros
+          </button>
+        </div>
+      </div>
+
+      <p class="estado-filtros" id="estadoFiltros" aria-live="polite">
+        Mostrando todos los registros.
+      </p>
+
+      <div class="kpis" aria-label="Indicadores principales">
+        <article class="kpi">
+          <span id="kpiRegistros">0</span>
+          <p>Registros analizados</p>
+        </article>
+
+        <article class="kpi">
+          <span id="kpiUnidades">0</span>
+          <p>Unidades disponibles</p>
+        </article>
+
+        <article class="kpi">
+          <span id="kpiValor">$0</span>
+          <p>Valor total estimado</p>
+        </article>
+
+        <article class="kpi">
+          <span id="kpiPromedio">$0</span>
+          <p>Precio promedio</p>
+        </article>
+
+        <article class="kpi">
+          <span id="kpiCategoria">Sin datos</span>
+          <p>Categoría líder</p>
+        </article>
+
+        <article class="kpi">
+          <span id="kpiVereda">Sin datos</span>
+          <p>Vereda líder</p>
+        </article>
+      </div>
+
+      <div class="paneles">
+        <article class="panel">
+          <h3>Interpretación automática</h3>
+          <p id="insightPrincipal" class="insight">
+            El análisis aparecerá cuando se conecte JavaScript.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h3>Valor por categoría</h3>
+          <div id="listaCategorias" class="lista-analisis"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Entrega incremental guiada - Semana 12</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
