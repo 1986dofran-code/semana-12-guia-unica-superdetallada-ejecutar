@@ -180,7 +180,7 @@ function obtenerDatosFiltrados() {
 
   return registros.filter(function (registro) {
     const textoRegistro = normalizarTexto(
-      `${registro.producto} ${registro.productor} ${registro.vereda}`
+      `${registro.producto} ${registro.categoria} ${registro.productor} ${registro.vereda}`
     );
 
     const coincideTexto = textoRegistro.includes(texto);

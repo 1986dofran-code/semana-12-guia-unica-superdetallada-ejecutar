@@ -22,6 +22,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hero {
   color: var(--blanco);
   background: linear-gradient(135deg, var(--azul-oscuro), var(--verde));
@@ -47,6 +51,12 @@ body {
   color: var(--blanco);
   font-weight: 700;
   text-decoration: none;
+}
+
+.nav a:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid #bfdbfe;
+  outline-offset: 4px;
 }
 
 .etiqueta {
@@ -120,6 +130,15 @@ table {
   width: 100%;
   border-collapse: collapse;
   min-width: 820px;
+}
+
+caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 th,
@@ -220,6 +239,7 @@ select:focus {
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 900;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .kpi p {
@@ -255,6 +275,7 @@ select:focus {
   justify-content: space-between;
   gap: 12px;
   font-weight: 800;
+  flex-wrap: wrap;
 }
 
 .barra {

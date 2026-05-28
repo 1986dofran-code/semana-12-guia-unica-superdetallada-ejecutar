@@ -6,6 +6,9 @@
 !ENTREGA_GIT_ESTUDIANTE/index.html
 !ENTREGA_GIT_ESTUDIANTE/styles.css
 !ENTREGA_GIT_ESTUDIANTE/script.js
+!ENTREGA_GIT_ESTUDIANTE/INFORME_QA.md
+!ENTREGA_GIT_ESTUDIANTE/capturas para anexar/
+!ENTREGA_GIT_ESTUDIANTE/capturas para anexar/*.png
 
 # Permitir este mismo archivo .gitignore
 !.gitignore

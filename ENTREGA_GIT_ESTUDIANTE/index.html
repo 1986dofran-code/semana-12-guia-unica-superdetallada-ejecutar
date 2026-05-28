@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datos rurales - Panel de análisis</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f7a4d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='32' font-family='Arial' font-weight='700' fill='white'%3EA%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
   <header class="hero">
@@ -38,15 +39,18 @@
 
       <div class="tabla-contenedor">
         <table>
+          <caption>
+            Registros rurales disponibles para análisis y filtrado.
+          </caption>
           <thead>
             <tr>
-              <th>Producto</th>
-              <th>Categoría</th>
-              <th>Productor</th>
-              <th>Vereda</th>
-              <th>Cantidad</th>
-              <th>Precio unitario</th>
-              <th>Valor estimado</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Productor</th>
+              <th scope="col">Vereda</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Precio unitario</th>
+              <th scope="col">Valor estimado</th>
             </tr>
           </thead>
           <tbody id="tablaDatos"></tbody>
@@ -68,7 +72,7 @@
         <div class="controles" aria-label="Controles de análisis">
           <label>
             Buscar
-            <input id="busqueda" type="search" placeholder="Producto, productor o vereda" />
+            <input id="busqueda" type="search" placeholder="Producto, categoría, productor o vereda" />
           </label>
 
           <label>
@@ -147,6 +151,6 @@
     <p>Entrega incremental guiada - Semana 12</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
